@@ -13,6 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
+
 });
 
 Route::auth();
@@ -22,8 +23,11 @@ Route::get('/home', 'HomeController@index');
 
 
 
-Route::get('/admin/user/roles', ['middleware' => 'role', function () {
+Route::get('/admin/user/roles', ['middleware' => ['web'], function () {
 
     return "Middleware role";
 }]);
 
+
+
+Route::get('/admin', 'AdminController@index');
