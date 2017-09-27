@@ -23,9 +23,23 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
-        $request->session()->put(['jesus' => 'student']);
+//        $request->session()->put(['jesus' => 'student']);
+//
+//        return $request->session()->get('jesus');
+//        session(['jesus' => 'a student']);
+//        echo session('jesus');
 
-        return $request->session()->get('jesus');
+//        session(['jesus2' => 'the same student']);
+//        return session('jesus2');
+
+//        $request->session()->forget('jesus2');
+
+//        $request->session()->flush();
+//          return $request->session()->all();
+
+
+//        $request->session()->flash('message', 'post has been created');
+        return $request->session()->get('message');
 
 //        return view('home');
     }
